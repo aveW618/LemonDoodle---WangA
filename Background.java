@@ -16,21 +16,18 @@ public class Background {
         //fill the rectangle with a chosen color
         onTop.setFillColor(255, 255, 255, 120);
         
-        Rectangle base = new Rectangle(520, 675, 645, 300);
+        Rectangle base = new Rectangle(520, 700, 645, 275);
         base.setFilled(false);
         
-         //Lemonade stand sign image
-        Image sign = new Image("PinkLemonadeSign.jpg", 520, 675);
+        Rectangle side1 = new Rectangle(567, 515, 20, 185);
+        Rectangle side2 = new Rectangle(1100, 515, 20, 185);
+        side1.setFillColor(255, 215, 230);
+        side2.setFillColor(255, 215, 230);
         
-        //resize image to fit full screen
-        sign.setSize(645, 300);
-        
-        Rectangle side1 = new Rectangle(567, 510, 20, 190);
-        Rectangle side2 = new Rectangle(1100, 510, 20, 190);
         
         //variables for scaffolding code
         int start = 520;
-        int verticalPosition = 480;
+        int verticalPosition = 495;
         int width = 66;
         int height = 80;
         int gap = 65;  
@@ -40,22 +37,27 @@ public class Background {
 		
 		//loop to create scaffolded awning
         for (int i = 0; i < 10; i++) {
-
+			
+			Arc scallop = new Arc(start + i * gap, verticalPosition, width, height, 180, 180);
+			scallop.setFilled(true);
             // rectangle ABOVE each scallop
-            Rectangle awningTop = new Rectangle(start + i * gap, verticalPosition - awningTopHeight, width, awningTopHeight);
+            Rectangle awningTop = new Rectangle(start + i * gap, verticalPosition - 54, width, awningTopHeight);
             
-            Arc scallop = new Arc(start + i * gap, verticalPosition, width, height, 180, 180);
-
-            scallop.setFilled(true);
-    
 		//alternating baby pink and baby yellow colors for the scaffolding using an if loop 
 			if (i % 2 == 0) {
-				scallop.setFillColor(255, 215, 230); 
-			} 
-			else {
-				scallop.setFillColor(255, 245, 200); 
-			}
+                awningTop.setFillColor(255, 215, 230);
+                scallop.setFillColor(255, 215, 230);
+            } 
+            else {
+                awningTop.setFillColor(255, 245, 200);
+                scallop.setFillColor(255, 245, 200);
+            }
 		}
+		 //Lemonade stand sign image
+        Image sign = new Image("PinkLemonadeSign.jpg", 520, 700);
+        
+        //resize image to fit full screen
+        sign.setSize(645, 300);
     }
 }
 
