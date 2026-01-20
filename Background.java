@@ -53,11 +53,22 @@ public class Background {
                 scallop.setFillColor(255, 245, 200);
             }
 		}
+		for (int i = 0; i < 11; i++) {
+			Line ln = new Line(start + i * gap, verticalPosition, start + i * gap, verticalPosition);
+			if (i % 2 == 0) {
+				ln.setFillColor(255,215,230);
+			}
+			else {
+				ln.setFillColor(255,245,200);
+			}
+		}
+			
 		 //Lemonade stand sign image
+		Pad signBase = new Pad("Pink Lemonade Sign", 520, 700);
         Image sign = new Image("PinkLemonadeSign.jpg", 520, 700);
         
         //resize image to fit full screen
-        sign.setSize(645, 300);
+        sign.setSize(645, 275);
     }
 }
 
