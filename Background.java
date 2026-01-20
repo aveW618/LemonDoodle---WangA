@@ -16,21 +16,21 @@ public class Background {
         //fill the rectangle with a chosen color
         onTop.setFillColor(255, 255, 255, 120);
         
-        //Lemonade stand sign image
-        Image sign = new Image("PinkLemonadeSign.jpg", 520, 820);
+        Rectangle base = new Rectangle(520, 680, 645, 400);
+        base.setFilled(false);
+        
+         //Lemonade stand sign image
+        Image sign = new Image("PinkLemonadeSign.jpg", 520, 680);
         
         //resize image to fit full screen
         sign.setSize(645, 400);
         
-        Rectangle base = new Rectangle(520, 820, 645, 400);
-        base.setFilled(false);
-        
-        Rectangle side1 = new Rectangle(567, 540, 20, 280);
-        Rectangle side2 = new Rectangle(1100, 540, 20, 280);
+        Rectangle side1 = new Rectangle(567, 500, 20, 280);
+        Rectangle side2 = new Rectangle(1100, 500, 20, 280);
         
         //variables for scaffolding code
         int start = 520;
-        int verticalPosition = 538;
+        int verticalPosition = 498;
         int width = 66;
         int height = 80;
         int gap = 65;  
