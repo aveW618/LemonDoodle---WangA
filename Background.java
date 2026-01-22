@@ -53,7 +53,7 @@ public class Background {
                 scallop.setFillColor(255, 245, 200);
             }
 		}
-		for (int i = 0; i < 11; i++) {
+		for (int i = 0; i < 12; i++) {
 			Line ln = new Line(start + i * gap, verticalPosition, start + i * gap, verticalPosition);
 			if (i % 2 == 0) {
 				ln.setFillColor(255,215,230);
@@ -64,11 +64,23 @@ public class Background {
 		}
 			
 		 //Lemonade stand sign image
-		Pad signBase = new Pad("Pink Lemonade Sign", 520, 700);
         Image sign = new Image("PinkLemonadeSign.jpg", 520, 700);
         
-        //resize image to fit full screen
+        //resize image to fit base
         sign.setSize(645, 275);
+        
+        Sprite sprite = new Sprite("childGirl.jpg", 570, 700, 190, 5);
+        
+        // Set Pad timer with a Java lambda function that advances sprite
+        pad.setTickHandler( (Pad p, long when) -> { sprite.advance(); } );
+        pad.setTickRate(10);
+        pad.startTimer();
+        
+        Oval cupBase1 = new Oval(622, 680, 40, 20);
+        Oval cupBase2 = new Oval(672, 680, 40, 20);
+        
+        Oval cupTop1 = new Oval(620, 650, 55, 20);
+        Oval cupTop2 = new Oval(670, 650, 55, 20);
     }
 }
 
