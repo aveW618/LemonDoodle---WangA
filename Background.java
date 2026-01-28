@@ -76,11 +76,30 @@ public class Background {
         pad.setTickRate(10);
         pad.startTimer();
         
-        Oval cupBase1 = new Oval(622, 680, 40, 20);
-        Oval cupBase2 = new Oval(672, 680, 40, 20);
+        Oval cupBase1 = new Oval(620, 690, 30, 10);
+        Oval cupBase2 = new Oval(680, 690, 30, 10);
         
-        Oval cupTop1 = new Oval(620, 650, 55, 20);
-        Oval cupTop2 = new Oval(670, 650, 55, 20);
+        Oval cupTop1 = new Oval(615, 660, 40, 16);
+        Oval cupTop2 = new Oval(675, 660, 40, 16);
+        cupBase1.setFillColor(255, 215, 230);
+        cupBase2.setFillColor(255, 215, 230);
+        
+        // Create and initialize two double[] arrays
+        //double[] Xs = new double[] { 620, 710, 150.0};
+        //double[] Ys = new double[] { 690, 690, 150.0};
+        
+        //double[] cupTwoXs = new double[] { 680, 710, 150.0};
+        // double[] cupTwoYs = new double[] { 690,  690, 150.0};
+        
+        // Pass arrays to Polygon constructor
+        //Polygon p1 = new Polygon(Xs, Ys);
+        
+        Oval lemon1 = new Oval(1040, 680, 40, 20);
+        Oval lemon2 = new Oval(1000, 680, 40, 20);
+        Oval topLemon = new Oval (1020, 665, 40, 20);
+        lemon1.setFillColor(255, 252, 153);
+        lemon2.setFillColor(255, 252, 153);
+        topLemon.setFillColor(255, 252, 153);
     }
 }
 
